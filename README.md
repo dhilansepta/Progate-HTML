@@ -1,1 +1,1 @@
-#Created to complete the HTML & CSS Exercise from Progate
+# Created to complete the HTML & CSS Exercise from Progate
