@@ -1,51 +1,68 @@
-/* Page */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-:root{
-    --primary: #e9e2e2;
+
+:root {
+    --primary: #f5f5f5;
     --secondary: #242222;
-    --accent: #ffcc00;
-    --font-light: #e9e2e2;
-    --font-dark: #000;
+    --accent: #ddb500;
+    --font-light: #f5f5f5;
+    --font-dark: #242222;
     --background: #9c9c9c;
 }
 
+/* Basic Styling */
 ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
 }
 
-.container {
-    max-width: 1170px;
-    height: 100%;
-    width: 100%;
-    margin: auto;
-}
-
-a{
+a {
     text-decoration: none;
 }
 
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
 /* Header */
-header{
+header {
     background-color: var(--secondary);
     height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 header .logo {
-    font-size: x-large;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--font-light);
 }
 
 header ul {
-    height: 100%;
+    display: flex;
+    gap: 15px;
 }
 
-header a{
+header ul li {
+    display: inline-block;
+}
+
+header a {
     color: var(--font-light);
     padding: 15px 10px;
     display: inline-block;
@@ -56,7 +73,351 @@ header a:hover {
     transition: 0.5s;
 }
 
-/* Main */
+/* Main Content */
+/* Greet */
+.greet {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 560px;
+    background-color: var(--primary);
+    color: var(--font-dark);
+    margin: 0;
+}
 
+.greet h1 {
+    letter-spacing: 4px;
+    font-size: 70px;
+}
+
+.greet h1::after {
+    content: ".";
+    color: var(--accent);
+}
+
+.greet h2 {
+    font-size: 40px;
+}
+
+.greet img {
+    width: 150px;
+}
+
+/*About Me*/
+.about {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: var(--background);
+    color: var(--font-dark);
+    margin: 0;
+}
+
+.about h3 {
+    font-size: 25px;
+}
+
+.about p {
+    font-size: 12px;
+    padding: 15px 50px;
+}
+
+/*Proyek Contoh*/
+.projects {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: var(--primary);
+    color: var(--font-dark);
+    margin: 0;
+}
+
+.projects h3 {
+    font-size: 25px;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding: 30px 0px;
+}
+
+.project{
+    img{
+        width: 250px;
+    }
+}
+
+/*Hubungi Saya*/
+.contacts {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: var(--background);
+    color: var(--font-dark);
+    margin: 0;
+}
+.contacts h3 {
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap:25px;
+}
+
+.contact-form input, .contact-form textarea{
+    border-radius: 5px;
+    border-color: var(--background);
+    border-width: 0;
+    height: 50px;
+    width: 60%;
+    font-size: 15px;
+}
+
+.contact-form {
+    .button {
+        width: 30%;
+        height: 50px;
+        display: block;
+        background-color: var(--accent);
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: var(--secondary);
+        color: var(--font-light);
+        transition: 0.5s;
+    }
+}
 
 /* Footer */
+.footer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: var(--secondary);
+    color: var(--font-light);
+    margin: 0;
+    padding: 0 40px;
+}
+
+.footer a {
+    color: var(--font-light);
+}
+
+.items i{
+    padding:5px;
+}
+
+.footer a:hover {
+    color: var(--accent);
+    transition: 0.5s;
+}
+
+/* Responsive Smartphone */
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        text-align: center;
+        position: relative;
+    }
+
+    header .logo {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header a {
+        font-size: 12px;
+        padding: 5px 0;
+    }
+
+    .greet h1 {
+        font-size: 50px;
+    }
+
+    .greet h2 {
+        font-size: 30px;
+    }
+
+    .greet img {
+        width: 120px;
+    }
+
+    .about {
+        height: auto;
+        padding: 20px;
+    }
+
+    .about h3 {
+        font-size: 18px;
+    }
+
+    .about p {
+        font-size: 12px;
+        padding: 5px 20px;
+        text-align: justify;
+    }
+    .projects {
+        height: auto;
+        padding: 30px 10px;
+    }
+
+    .projects h3 {
+        font-size: 18px;
+    }
+
+    .projects-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .project img {
+        width: 180px;
+    }
+
+    .contacts {
+        padding: 40px 15px;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .contact-form .button {
+        width: 60%;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .footer a {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Tablet */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    header {
+        padding: 0 15px;
+    }
+
+    header ul {
+        gap: 10px;
+    }
+
+    header a {
+        font-size: 14px;
+        padding: 10px 8px;
+    }
+
+    .greet {
+        height: 350px;
+    }
+
+    .greet h1 {
+        font-size: 40px;
+    }
+
+    .greet h2 {
+        font-size: 25px;
+    }
+
+    .greet img {
+        width: 100px;
+    }
+
+    .about {
+        height: auto;
+        padding: 25px 30px;
+    }
+
+    .about h3 {
+        font-size: 20px;
+    }
+
+    .about p {
+        font-size: 13px;
+        padding: 10px 25px;
+        text-align: justify;
+    }
+
+    .projects {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .projects h3 {
+        font-size: 22px;
+    }
+
+    .projects-list {
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project img {
+        width: 220px;
+    }
+
+    .contacts {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+        width: 80%;
+    }
+
+    .contact-form .button {
+        width: 50%;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 15px;
+    }
+}
