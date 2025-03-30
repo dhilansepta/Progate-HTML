@@ -1,0 +1,62 @@
+/* Page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+:root{
+    --primary: #e9e2e2;
+    --secondary: #242222;
+    --accent: #ffcc00;
+    --font-light: #e9e2e2;
+    --font-dark: #000;
+    --background: #9c9c9c;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1170px;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Header */
+header{
+    background-color: var(--secondary);
+    height: 60px;
+}
+
+header .logo {
+    font-size: x-large;
+}
+
+header ul {
+    height: 100%;
+}
+
+header a{
+    color: var(--font-light);
+    padding: 15px 10px;
+    display: inline-block;
+}
+
+header a:hover {
+    color: var(--accent);
+    transition: 0.5s;
+}
+
+/* Main */
+
+
+/* Footer */
